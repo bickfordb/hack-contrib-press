@@ -1,13 +1,7 @@
-{-# LANGUAGE DeriveDataTypeable #-}
-{-# OPTIONS -fglasgow-exts #-}
-
 module Main where
 
-import Data.ByteString.Lazy.Char8 (pack)
-import Data.Data
 import Hack
-import Hack.Contrib.Press
-import Hack.Handler.Happstack
-import Text.JSON.Generic
+import Hack.Contrib.Press (renderToResponse)
+import Hack.Handler.Happstack (run)
 
 main = run $ \env -> do renderToResponse env "env.html" []

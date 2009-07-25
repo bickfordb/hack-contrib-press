@@ -12,5 +12,5 @@ Build-Type:          Simple
 Cabal-Version:       >= 1.2
 
 Library
-  Build-Depends:     base, bytestring, bytestring-class, containers, mtl, hack >= 2009.7.15, parsec >= 3.0.0, press, json
+  Build-Depends:     base < 4, bytestring, bytestring-class, containers, mtl, hack >= 2009.7.15, parsec >= 3.0.0, press, json
   Exposed-Modules:   Hack.Contrib.Press

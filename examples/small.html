@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <p>
+            Hey <b>{{ name }}</b>, I heard you like:
+            <ul>
+                {% for music in favoriteMusic %}
+                    <li>{{ music }}</li>
+                {% endfor %}
+            </ul>     
+        </p>
+    </body>
+</html>
