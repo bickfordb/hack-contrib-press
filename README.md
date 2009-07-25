@@ -4,8 +4,9 @@ Hack.Contrib.Press
 Quickstart
 -------------
 
-Small.hs 
+Small.hs
 --------
+
     {-# LANGUAGE DeriveDataTypeable #-}
     {-# OPTIONS -fglasgow-exts #-}
 
