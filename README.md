@@ -7,24 +7,24 @@ Quickstart
 Small.hs 
 --------
 <code>
-{-# LANGUAGE DeriveDataTypeable #-}
-{-# OPTIONS -fglasgow-exts #-}
+    {-# LANGUAGE DeriveDataTypeable #-}
+    {-# OPTIONS -fglasgow-exts #-}
 
-module Main where
+    module Main where
 
-import Hack
-import Hack.Contrib.Press (renderToResponse)
-import Hack.Handler.Happstack (run)
-import Text.JSON.Generic
+    import Hack
+    import Hack.Contrib.Press (renderToResponse)
+    import Hack.Handler.Happstack (run)
+    import Text.JSON.Generic
 
-data Profile = Profile {
-    name :: String,
-    favoriteMusic :: [String]
-} deriving (Data, Typeable)
+    data Profile = Profile {
+        name :: String,
+        favoriteMusic :: [String]
+    } deriving (Data, Typeable)
 
-main = run $ \env -> do renderToResponse env "small.html" context
-    where aProfile = Profile "Brandon Bickford" ["Rock"]
-          context = [toJSON aProfile]
+    main = run $ \env -> do renderToResponse env "small.html" context
+        where aProfile = Profile "Brandon Bickford" ["Rock"]
+              context = [toJSON aProfile]
 </code>
 
 small.html
