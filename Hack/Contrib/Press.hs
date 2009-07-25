@@ -1,4 +1,4 @@
-module Hack.Contrib.Press  where
+module Hack.Contrib.Press (renderToResponse, envToJS, defaultContext) where
 
 import Data.ByteString.Class
 import Data.Data
@@ -9,10 +9,6 @@ import Text.Press.Run
 import qualified Hack
 
 -- converts a context and template name or body into a response
-
-errorTemplate = "<html><body><h1>Error</h1><h2>Unable to render</html>" 
-templateNameVar = "template.name"
-templateBodyVar = "template.body"
 
 renderToResponse :: Hack.Env -> String -> [JSValue] -> IO Response
 renderToResponse env filename context = runJSValuesWithPath sl filename >>= resultToResponse
