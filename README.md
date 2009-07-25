@@ -6,7 +6,6 @@ Quickstart
 
 Small.hs 
 --------
-<code>
     {-# LANGUAGE DeriveDataTypeable #-}
     {-# OPTIONS -fglasgow-exts #-}
 
@@ -25,12 +24,10 @@ Small.hs
     main = run $ \env -> do renderToResponse env "small.html" context
         where aProfile = Profile "Brandon Bickford" ["Rock"]
               context = [toJSON aProfile]
-</code>
 
 small.html
 ----------
 
-<code>
     <html>
         <body>
             <p>
@@ -43,7 +40,6 @@ small.html
             </p>
         </body>
     </html>
-</code>
 
 Run 
 ---
